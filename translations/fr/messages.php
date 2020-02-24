@@ -36,8 +36,8 @@ return [
     'Be carefull to write all the new and the former properties of the updated object.' => 'Attention, veillez à écrire toutes les nouvelles et les anciennes propriétés de l\'objet mis à jour.',
 
     // C
-    'Click on a serie to add an event!' =>'Cliquer sur une série pour ajouter un évenement!',
-    'Click on the circle up to the serie to see images.' =>'Cliquer sur le cercle au dessus de la serie pour voir l\'image.',
+    'Click on a serie to add an event!' =>'Cliquer sur une série pour ajouter un événement!',
+    'Click on the circle up to the serie to see images.' =>'Cliquer sur le cercle au dessus de la série pour voir l\'image.',
     'CSV file headers does not match selected variables' => 'Les en-têtes du fichier CSV ne correspondent pas aux variables sélectionnées',
     'CSV separator must be' => 'Le séparateur de champs CSV doit être',
 

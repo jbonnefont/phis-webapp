@@ -284,7 +284,6 @@ class YiiExperimentModel extends WSActiveRecord {
                 $experimentContact[YiiUserModel::FIRST_NAME] = $contact->{YiiUserModel::FIRST_NAME};
                 $experimentContact[YiiUserModel::FAMILY_NAME] = $contact->{YiiUserModel::FAMILY_NAME};
                 $experimentContact[YiiUserModel::EMAIL] = $contact->{YiiUserModel::EMAIL};
-
                 if ($contact->{YiiExperimentModel::CONTACT_TYPE} === YiiExperimentModel::CONTACT_SCIENTIFIC_SUPERVISOR) {
                     $this->scientificSupervisorContacts[] = $experimentContact;
                 } else {
@@ -316,11 +315,9 @@ class YiiExperimentModel extends WSActiveRecord {
             $params[\app\models\wsModels\WSConstants::PAGE] = $this->page;
         }
         $requestRes = $this->wsModel->getExperimentByURI($sessionToken, $uri, $params);
-        
 
         if (!is_string($requestRes)) {
             if (isset($requestRes->{'metadata'}->{'status'}[0]->{'exception'}->{'details'}) && $requestRes->{'metadata'}->{'status'}[0]->{'exception'}->{'details'} === \app\models\wsModels\WSConstants::TOKEN_INVALID) {
-                
                 return \app\models\wsModels\WSConstants::TOKEN_INVALID;
             } else if (isset($requestRes->{'metadata'}->{'status'}[0]->{'exception'}->{'details'})) {
                 return $requestRes->{'metadata'}->{'status'}[0]->{'exception'}->{'details'};

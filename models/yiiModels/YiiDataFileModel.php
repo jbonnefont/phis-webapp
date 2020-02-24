@@ -73,7 +73,10 @@ class YiiDataFileModel extends WSActiveRecord {
 
     const JSON_VALUE_FILTER = "jsonValueFilter";
    
-    
+     /**
+     * The URI of the provenance  
+     * @var string
+     */
     public $provenance;
 
     const PROVENANCE = "provenance";

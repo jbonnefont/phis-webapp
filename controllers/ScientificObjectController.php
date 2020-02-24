@@ -1168,12 +1168,12 @@ class ScientificObjectController extends Controller {
     /**
      * Create an associative array of imagesUri[]/date from an scientific object for a specified object
      * [
-      {
-      "date":"1500768000000",
-      "photos": [[url,filtre],[],[],....] },
-      {
-      "date":"1404896300000",
-      "photos": [[url,filtre],[],[],....] },..,
+        {
+         "date":"1500768000000",
+         "photos": [[url,filtre],[],[],....] },
+        {
+         "date":"1404896300000",
+         "photos": [[url,filtre],[],[],....] },..,
      * ]
      * @param type $objectUri 
      * @param type $rdfType 
@@ -1210,8 +1210,6 @@ class ScientificObjectController extends Controller {
             $imagesByDateToSave[] = $imagesEl['position'];
             $imagesByDate[$imagesEl['date']][] = $imagesByDateToSave;
         }
-
-
         return $imagesByDate;
     }
 
@@ -1223,7 +1221,6 @@ class ScientificObjectController extends Controller {
      */
     function group_by($key, $array) {
         $result = array();
-
         foreach ($array as $val) {
             if (array_key_exists($key, $val)) {
                 $result[$val[$key]][] = $val;
@@ -1231,7 +1228,6 @@ class ScientificObjectController extends Controller {
                 $result[""][] = $val;
             }
         }
-
         return $result;
     }
 

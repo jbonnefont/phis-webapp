@@ -30,12 +30,14 @@ class YiiDataModel extends WSActiveRecord {
      * @var string
      */
     public $variable;
+    
     /**
      * uri of the object concerned by the data.
      * @example http://www.opensilex.org/demo/2018/o18000076
      * @var string
      */
     public $object;
+    
     /**
      * Uri of the provenance of the data.
      * @example http://www.opensilex.org/id/provenance/02465464
@@ -43,6 +45,10 @@ class YiiDataModel extends WSActiveRecord {
      */
     public $provenance;
     
+    /**
+     * The boolean to sort the date ascending.
+     * @var boolean
+     */
     public $dateSortAsc;
     
     /**
